@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-XI-h76">
+                                <rect key="frame" x="40" y="358" width="135" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="FkV-ub-Y4h"/>
+                                    <constraint firstAttribute="height" constant="70" id="Gq5-m0-Ohj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                                <connections>
+                                    <action selector="SendAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7h-hO-xiT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uru-W4-rsO">
+                                <rect key="frame" x="218" y="358" width="135" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ICj-q3-6Df"/>
+                                    <constraint firstAttribute="width" constant="135" id="Mbs-oL-EJS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Receive"/>
+                                <connections>
+                                    <action selector="ReceiveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyv-pV-bAs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send / Receive GPS data's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtG-Ga-lhh">
+                                <rect key="frame" x="96" y="89" width="201" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xLh-Zg-gou"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eOP-XI-h76" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="7VP-Tf-laE"/>
+                            <constraint firstItem="TtG-Ga-lhh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BWl-sv-Rvy"/>
+                            <constraint firstItem="TtG-Ga-lhh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GDm-0b-uq4"/>
+                            <constraint firstItem="uru-W4-rsO" firstAttribute="leading" secondItem="eOP-XI-h76" secondAttribute="trailing" constant="43" id="X9u-VK-Cgc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uru-W4-rsO" secondAttribute="trailing" constant="40" id="f7M-a2-1Fg"/>
+                            <constraint firstItem="eOP-XI-h76" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="299" id="nes-Nk-FSj"/>
+                            <constraint firstItem="uru-W4-rsO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="299" id="qn4-Gl-Mkl"/>
+                            <constraint firstItem="eOP-XI-h76" firstAttribute="top" secondItem="TtG-Ga-lhh" secondAttribute="bottom" constant="229" id="yKB-nB-XtT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Receive" destination="uru-W4-rsO" id="ZxR-fY-lCg"/>
+                        <outlet property="Send" destination="eOP-XI-h76" id="Iez-jW-OdW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
